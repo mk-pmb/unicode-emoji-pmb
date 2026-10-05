@@ -3,9 +3,14 @@
 
 const getOwn = require('getown');
 
+const legacyAliases = require('./legacyAliases.js');
+
 const u = {
   ...require('./uniMisc.js'),
 };
+
+Object.entries(legacyAliases).forEach(
+  function add([old, latest]) { u[old] = u[latest]; });
 
 
 function vari(v) { return String.fromCodePoint(0xFE00 + (v - 1)); } /*
@@ -40,6 +45,7 @@ const EX = function loopkup(name) {
 Object.assign(EX, {
   customAdditionsAndPlaceholders,
   emoji,
+  legacyAliases,
   unicode: u,
   vari,
 });
