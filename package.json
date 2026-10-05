@@ -1,5 +1,5 @@
 { "name": "unicode-emoji-pmb",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A lookup function for selected Unicode emoji, with some custom additions and placeholders.",
   "keywords": [
     "emoji",
